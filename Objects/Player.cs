@@ -32,7 +32,7 @@ namespace Objects
 
             Position.X += hsp;
             //Position.Y += vsp;
-            for (int i = 0; i < Utilities.objList.Count; i++) {
+            /*for (int i = 0; i < Utilities.objList.Count; i++) {
                 if (Utilities.objList[i].ToString() == "Objects.Enemy") {
                     if (Colliding(Utilities.objList[i])) {
                         vsp += Gravity;
@@ -42,7 +42,7 @@ namespace Objects
                     }
                 }
             }
-            Position.Y += vsp;
+            Position.Y += vsp; */
             base.Update();
         }
 

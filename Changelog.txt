@@ -1,5 +1,9 @@
 [Changelog]
 
+[1.0.1]
+Removed code that would cause an instant crash due to a missing, old function.
+Check_Pressed function still doesn't work.
+
 [1.0]
 Added the first engine files including primitive support for objects (Object2D).
 

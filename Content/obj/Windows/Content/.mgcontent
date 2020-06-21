@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>D:/Archivos de Usuario/Documentos/Platformer01/Content/Sprites/Placeholders/59f6d5d3-69be-4c59-bb57-b9591175d8c7.png</File>
+    <File>D:/Archivos de Usuario/Documentos/Platformer01/Content/Sprites/Placeholders/d27d32ce-b74b-487d-b86a-0976f406f963.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File>Sprites/Placeholders/spr_test32.png</File>
+    <File>Sprites/Placeholders/spr_enemy.png</File>
+  </DestFiles>
+</SourceFileCollection>

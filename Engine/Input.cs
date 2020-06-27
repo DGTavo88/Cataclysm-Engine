@@ -11,8 +11,10 @@ namespace Cataclysm
     class Input
     {
 
-        static KeyboardState oldState = Keyboard.GetState();
+        static KeyboardState oldState = Keyboard.GetState(); //Variable used to store the old state of the keyboard.
 
+        //[Check (Bool)]
+        //This function is used to check if the selected key has been pressed.
         public static bool Check(Keys selectedKey) {
             var currentState = Keyboard.GetState();
             if (currentState.IsKeyDown(selectedKey)) {
@@ -21,6 +23,9 @@ namespace Cataclysm
             return false;
         }
 
+        //[Check_Pressed (Bool)]
+        //This function is used to check if the selected key has been pressed, but only activates for one frame.
+        //CURRENTLY NOT WORKING. I NEED TO FIX IT.
         public static bool Check_Pressed(Keys selectedKey) {
             var currentState = Keyboard.GetState();
             if (currentState.IsKeyDown(selectedKey) && oldState.IsKeyUp(selectedKey)) {

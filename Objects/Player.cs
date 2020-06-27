@@ -12,8 +12,6 @@ namespace Objects
 {
     class Player : Object2D
     {
-        int hsp;
-        float vsp;
         int Speed = 6;
         float Gravity = 0.3f;
 
@@ -26,23 +24,24 @@ namespace Objects
         {
             var key_left = Input.Check(Keys.Left);
             var key_right = Input.Check(Keys.Right);
+            var key_jump = Input.Check(Keys.Space);
 
-            var move = Convert.ToInt32(key_right) - Convert.ToInt32(key_left);
-            hsp = move * Speed;
+            var Direction = Convert.ToInt32(key_right) - Convert.ToInt32(key_left);
+            Velocity.X = Direction * Speed;
 
-            Position.X += hsp;
-            //Position.Y += vsp;
-            /*for (int i = 0; i < Utilities.objList.Count; i++) {
-                if (Utilities.objList[i].ToString() == "Objects.Enemy") {
-                    if (Colliding(Utilities.objList[i])) {
-                        vsp += Gravity;
-                    }
-                    else {
-                        vsp = 0;
+            Position.X += Velocity.X;
+            Velocity.Y += Gravity;
+            for (int i = 0; i < Utilities.objList.Count; i++) {
+                if (Utilities.objList[i].ToString() == "Objects.Wall") {
+                    if (CollidingTop(Utilities.objList[i])) {
+                        Velocity.Y = 0;
+                        if (key_jump) {
+                            Velocity.Y = -7;
+                        }
                     }
                 }
             }
-            Position.Y += vsp; */
+            Position.Y += Velocity.Y;
             base.Update();
         }
 

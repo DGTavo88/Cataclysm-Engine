@@ -22,3 +22,4 @@ D:\Archivos de Usuario\Documentos\Platformer01\bin\Windows\x86\Debug\SharpDX.Dir
 D:\Archivos de Usuario\Documentos\Platformer01\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
 D:\Archivos de Usuario\Documentos\Platformer01\bin\Windows\x86\Debug\SharpDX.XInput.xml
 D:\Archivos de Usuario\Documentos\Platformer01\obj\x86\Debug\CataclysmEngine.csproj.CopyComplete
+D:\Archivos de Usuario\Documentos\Platformer01\bin\Windows\x86\Debug\Content\Sprites\Placeholders\spr_wall.xnb

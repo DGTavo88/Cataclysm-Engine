@@ -16,7 +16,7 @@ namespace Objects
         bool isClimb = true;
         public override void Init(Vector2 pos, Texture2D texture)
         {
-            Scale = new Vector2(1, 8);
+            Scale = new Vector2(12, 8);
             base.Init(pos, texture);
         }
 

@@ -44,7 +44,6 @@
     <Compile Include="Engine\Input.cs" />
     <Compile Include="Engine\Object2D.cs" />
     <Compile Include="Objects\Enemy.cs" />
-    <Compile Include="Objects\Ilol.cs" />
     <Compile Include="Objects\Player.cs" />
     <Compile Include="Engine\Utilities.cs" />
     <Compile Include="Game1.cs" />

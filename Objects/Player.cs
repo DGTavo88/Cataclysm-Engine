@@ -12,7 +12,8 @@ namespace Objects
 {
     class Player : Object2D
     {
-        int Speed = 6;
+        int Speed = 4;
+        float Jump_Height = -7f;
         float Gravity = 0.3f;
 
         public override void Init(Vector2 pos, Texture2D texture)
@@ -25,8 +26,11 @@ namespace Objects
             var key_left = Input.Check(Keys.Left);
             var key_right = Input.Check(Keys.Right);
             var key_jump = Input.Check(Keys.Space);
+            var key_run = Input.Check(Keys.LeftShift);
 
             var Direction = Convert.ToInt32(key_right) - Convert.ToInt32(key_left);
+
+            Speed = (key_run) ? 6 : 4;
             Velocity.X = Direction * Speed;
 
             Position.X += Velocity.X;
@@ -36,7 +40,7 @@ namespace Objects
                     if (CollidingTop(Utilities.objList[i])) {
                         Velocity.Y = 0;
                         if (key_jump) {
-                            Velocity.Y = -7;
+                            Velocity.Y = Jump_Height;
                         }
                     }
                 }

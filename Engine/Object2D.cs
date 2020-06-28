@@ -47,7 +47,7 @@ namespace Cataclysm
         //You can use this function to write all of the behaviour of your object.
         //This function can be overrided.
         public virtual void Update() {
-            Hitbox = new Rectangle((int)Position.X, (int)Position.Y, Sprite.Width, Sprite.Height); //Updates the position of the hitbox.
+            Hitbox = new Rectangle((int)Position.X, (int)Position.Y, Sprite.Width * (int)Scale.X, Sprite.Height * (int)Scale.Y); //Updates the position of the hitbox.
         }
 
         //[Draw (Void)]

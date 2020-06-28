@@ -33,11 +33,10 @@ namespace CataclysmEngine
             enemy.Init(new Vector2(88 * 4, 88), Content.Load<Texture2D>("Sprites/Placeholders/spr_enemy"));
 
             Wall wall = new Wall();
-            ilol.Init(new Vector2(88, 88 * 4), Content.Load<Texture2D>("Sprites/Placeholders/spr_wall"));
+            wall.Init(new Vector2(88, 88 * 4), Content.Load<Texture2D>("Sprites/Placeholders/spr_wall"));
 
             Utilities.objList.Add(player);
             Utilities.objList.Add(enemy);
-            Utilities.objList.Add(ilol);
             Utilities.objList.Add(wall);
 
             base.Initialize();

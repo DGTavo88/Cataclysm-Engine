@@ -1,6 +1,7 @@
-﻿using System;
+﻿using Cataclysm;
+using System;
 
-namespace CataclysmEngine
+namespace CataclysmEngine //Make sure the namespace is the same as in Game1.cs
 {
 #if WINDOWS || LINUX
     /// <summary>
@@ -19,7 +20,13 @@ namespace CataclysmEngine
         {
             //using (var game = new Game1())
                 //Game = game;
-            Game.Run();
+            try {
+                Utilities.mainInstance = Game;
+                Game.Run();
+            }
+            catch (Exception e) {
+                Utilities.LogException(e);
+            }
         }
     }
 #endif

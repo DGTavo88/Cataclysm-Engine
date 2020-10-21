@@ -13,6 +13,25 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin Fonts/Consolas.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Fonts/Consolas.spritefont
+
+#begin Sprites/Cat/CatTest01.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/Cat/CatTest01.png
+
 #begin Sprites/Placeholders/59f6d5d3-69be-4c59-bb57-b9591175d8c7.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -37,6 +56,18 @@
 /processorParam:TextureFormat=Color
 /build:Sprites/Placeholders/82c8d8bf-8776-4af9-ab1e-e622e8e262ea.png;Sprites/Placeholders/spr_wall.png
 
+#begin Sprites/Placeholders/animTest.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/Placeholders/animTest.png
+
 #begin Sprites/Placeholders/d27d32ce-b74b-487d-b86a-0976f406f963.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -48,4 +79,16 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Sprites/Placeholders/d27d32ce-b74b-487d-b86a-0976f406f963.png;Sprites/Placeholders/spr_enemy.png
+
+#begin Sprites/Tilesets/Tileset_Surface_Candy.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/Tilesets/Tileset_Surface_Candy.png;Sprites/Tilesets/Tileset01.png
 

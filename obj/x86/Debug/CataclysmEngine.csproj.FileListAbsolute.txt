@@ -23,3 +23,9 @@ D:\Archivos de Usuario\Documentos\Platformer01\bin\Windows\x86\Debug\SharpDX.Dir
 D:\Archivos de Usuario\Documentos\Platformer01\bin\Windows\x86\Debug\SharpDX.XInput.xml
 D:\Archivos de Usuario\Documentos\Platformer01\obj\x86\Debug\CataclysmEngine.csproj.CopyComplete
 D:\Archivos de Usuario\Documentos\Platformer01\bin\Windows\x86\Debug\Content\Sprites\Placeholders\spr_wall.xnb
+D:\Archivos de Usuario\Documentos\Platformer01\bin\Windows\x86\Debug\Content\Fonts\Consolas.xnb
+D:\Archivos de Usuario\Documentos\Platformer01\bin\Windows\x86\Debug\Content\Sprites\Placeholders\animTest.xnb
+D:\Archivos de Usuario\Documentos\Platformer01\bin\Windows\x86\Debug\Content\Sprites\Cat\CatTest01.xnb
+D:\Archivos de Usuario\Documentos\Platformer01\bin\Windows\x86\Debug\Newtonsoft.Json.dll
+D:\Archivos de Usuario\Documentos\Platformer01\bin\Windows\x86\Debug\Newtonsoft.Json.xml
+D:\Archivos de Usuario\Documentos\Platformer01\bin\Windows\x86\Debug\Content\Sprites\Tilesets\Tileset01.xnb

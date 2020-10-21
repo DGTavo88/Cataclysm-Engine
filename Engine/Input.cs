@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Cataclysm
 {
-    class Input
+    public class Input
     {
 
         static KeyboardState oldState = Keyboard.GetState(); //Variable used to store the old state of the keyboard.
@@ -16,11 +16,7 @@ namespace Cataclysm
         //[Check (Bool)]
         //This function is used to check if the selected key has been pressed.
         public static bool Check(Keys selectedKey) {
-            var currentState = Keyboard.GetState();
-            if (currentState.IsKeyDown(selectedKey)) {
-                return true;
-            }
-            return false;
+            return Keyboard.GetState().IsKeyDown(selectedKey); //Check if the key is being pressed and return the value.
         }
 
         //[Check_Pressed (Bool)]

@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Platformer01")]
-[assembly: AssemblyProduct("Platformer01")]
+[assembly: AssemblyTitle("Cataclysm Engine")]
+[assembly: AssemblyProduct("Cataclysm Engine")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyDescription("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyCopyright("Copyright ©  2020")]
+[assembly: AssemblyCompany("Dynamo Games")]
+[assembly: AssemblyCopyright("Copyright © Octavio Peñaloza 2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

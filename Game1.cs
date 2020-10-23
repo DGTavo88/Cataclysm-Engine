@@ -20,7 +20,6 @@ namespace CataclysmEngine //Make sure the namespace is the same as the one in Pr
 
         Level level;
         Player player;
-        Alarm plsUpdate = new Alarm(60 * 1);
 
         public Game1()
         {
@@ -36,7 +35,7 @@ namespace CataclysmEngine //Make sure the namespace is the same as the one in Pr
         {
             // TODO: Add your initialization logic here
 
-            level = new Level(Utilities.savepath + @"\Ogmo Projects\TilesetTest\level01.json");
+            level = new Level(Utilities.savepath + @"\Ogmo Projects\TilesetTest\level01.json"); //Currently loading level from the Local Appdata. Change this path to wherever it is you store your level.
             player = new Player();
             player.contentManager = Utilities.mainManager;
             player.Init(Vector2.Zero);
@@ -72,22 +71,8 @@ namespace CataclysmEngine //Make sure the namespace is the same as the one in Pr
                 }
             }
 
-            player.Update();
-
-
-            level.Update();
-
-            //This loop goes through the object list and calls the Update function of all of them.
-            /*
-            for (int i = 0; i < Utilities.objList.Count; i++) {
-                try {
-                    Utilities.objList[i].Update(); //Call Update function.
-                }
-                catch (Exception e) {
-                    Utilities.LogException(e, "[ERROR!]: Object \"" + Utilities.objList[i].ToString() + "\" has triggered an unknown exception (" + e.GetType().ToString() + ").");
-                }
-            }
-            */
+            player.Update(); //Updates player logic.
+            level.Update();  //Updates level logic.
             base.Update(gameTime);
         }
 

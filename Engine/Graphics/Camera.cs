@@ -8,6 +8,8 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Cataclysm.Graphics
 {
+    //[Camera Class]
+    //This class contains the standard functionality for a Camera.
     public class Camera
     {
         private Matrix transform;
@@ -20,7 +22,7 @@ namespace Cataclysm.Graphics
         private Vector2 center;
         private Viewport viewPort = Utilities.mainGraphicsManager.GraphicsDevice.Viewport;
 
-        private float zoom = 3.5f;
+        private float zoom = 1f; //3.5f
         private float rotation = 0;
 
         public float X {

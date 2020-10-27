@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -23,7 +19,7 @@ namespace Cataclysm.Graphics
         private Viewport viewPort = Utilities.mainGraphicsManager.GraphicsDevice.Viewport;
 
         private float zoom = 1f; //3.5f
-        private float rotation = 0;
+        private float Rotation = 0;
 
         public float X {
             get { return center.X; }
@@ -40,10 +36,6 @@ namespace Cataclysm.Graphics
             set { zoom = value; if (zoom < 0.1f) { zoom = 0.1f; } }
         }
 
-        public float Rotation {
-            get { return rotation; }
-            set { rotation = value; }
-        }
 
         public Camera() {
             if (Utilities.mainCamera == null)
@@ -51,7 +43,6 @@ namespace Cataclysm.Graphics
         }
 
         public void Update(Vector2 Position) {
-            //Console.WriteLine("Viewport: " + viewPort.ToString());
             center = Position;
             transform = Matrix.CreateTranslation(new Vector3(-center.X, -center.Y, 0)) *
                         Matrix.CreateRotationZ(Rotation) *

@@ -57,7 +57,7 @@ namespace Cataclysm
         //Example:
         //  public Sprite sprite = contentManager.Load<Texture2D>("MyTexture");  
         
-        //It requires one parameters: A Vector2.
+        //It requires one parameter: A Vector2.
         //All objects must be initialized, preferably after creation.
         //This function can be overrided.
         public virtual void Init(Vector2 pos) {

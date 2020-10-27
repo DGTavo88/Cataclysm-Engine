@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Content;
 
 namespace Cataclysm.Graphics
@@ -87,7 +82,7 @@ namespace Cataclysm.Graphics
         }
 
         public bool AnimationFinished() {
-            return CurrentFrame == AnimationFrames; //Returns true or false depending on whether the current animation frame equals the number of animation frames, meaning it reached the end.
+            return CurrentFrame == AnimationFrames - 1; //Returns true or false depending on whether the current animation frame equals the number of animation frames - 1, meaning it reached the end.
         }
 
         public virtual void Draw(Vector2 Position, SpriteBatch spriteBatch) {

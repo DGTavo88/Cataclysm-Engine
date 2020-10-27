@@ -1,12 +1,8 @@
 ﻿using System;
 using System.IO;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Content;
 using Newtonsoft.Json;
 
@@ -16,20 +12,19 @@ namespace Cataclysm.Graphics
     {
         public string TilesetName;
         public string TilesetPath = "Content/Sprites/Tilesets/";
-        public string TilesetMetaPath = "Content/Metadata/";
+        public int TileSize = 16;
 
         public Texture2D TilesetTexture;
         public List<Vector2> TilesetCoordinates = new List<Vector2>();
 
-        public Tileset(string tilesetname, ContentManager Manager) {
-            TilesetName = tilesetname;
+        public Tileset(string Tileset_Name, int Tile_Size, ContentManager Manager) {
+            TilesetName = Tileset_Name;
             TilesetTexture = Manager.Load<Texture2D>(TilesetPath + TilesetName);
-            var TilesetJsonString = File.ReadAllText(TilesetMetaPath + TilesetName + ".json");
-            var preData = JsonConvert.DeserializeObject<List<List<int>>>(TilesetJsonString);
-            for (var i = 0; i < preData.Count; i++) {
-                Vector2 currentData = new Vector2(preData[i][0], preData[i][1]);
-                Console.WriteLine(currentData);
-                TilesetCoordinates.Add(currentData);
+            for (int i = 0; i <= TilesetTexture.Height; i += TileSize) {
+                for (int n = 0; n <= TilesetTexture.Width; n += TileSize) {
+                    TilesetCoordinates.Add(new Vector2(i, n));
+                    Console.WriteLine("");
+                }
             }
             Console.WriteLine("Tileset Coordinates Size: " + TilesetCoordinates.Count);
         }

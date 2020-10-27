@@ -77,7 +77,7 @@ namespace Cataclysm.Levels
         }
 
         void LoadTileset(string tileset, Vector2 celldimensions, Vector2 cellnumber) {
-            LevelTileset = new Tileset(tileset, contentManager);
+            LevelTileset = new Tileset(tileset, 16, contentManager);
             int i = 0; 
             for (int tiley = 0; tiley < cellnumber.Y; tiley++) {
                 for (int tilex = 0; tilex < cellnumber.X; tilex++) {
@@ -86,7 +86,6 @@ namespace Cataclysm.Levels
                         Vector2 currentPos = new Vector2(tilex * celldimensions.X, tiley * celldimensions.Y);
                         Tile currentTile = new Tile(LevelTileset, currentPos, TileData[i], celldimensions);
                         TilesList.Add(currentTile);
-                        Utilities.objList.Add(currentTile);
                     }
                     i++;
                 }
@@ -94,15 +93,11 @@ namespace Cataclysm.Levels
         }
 
         public void Update() {
-            /*for (int i = 0; i < TilesList.Count; i++) {
-                TilesList[i].Update();
-            }*/
-
             for (int i = 0; i < ObjectsList.Count; i++) {
                 ObjectsList[i].Update();
             }
 
-            if (Input.Check(Keys.F5)){
+            if (Input.KeyboardCheckPressed(Keys.F5)){
                 Console.WriteLine("Reload Level.");
                 DestroyObjects();
                 UnloadContent();

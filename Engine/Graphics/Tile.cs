@@ -1,18 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework.Content;
 
 namespace Cataclysm.Graphics
 {
-    public class Tile : Object2D
+    public class Tile
     {
         public Texture2D Texture;                       //The texture of the tile.
+        public Vector2 Position = new Vector2(0, 0);    //Position of the tile. Default: (0, 0)
         public Rectangle? srcRect = null;               //Rectangles that specify which part of the texture to draw.
         public Color Blend = Color.White;               //The color of the tile. Default: Color.White.
         public float Rotation = 0;                      //Rotation of the tile. Default: 0
@@ -28,20 +23,12 @@ namespace Cataclysm.Graphics
             Texture = tileset.TilesetTexture;
             TileID = tileid;
             srcRect = new Rectangle((int)(tileset.TilesetCoordinates[tileid].X * (int)Scale.X), (int)tileset.TilesetCoordinates[tileid].Y * (int)Scale.Y, (int)(tiledimensions.X), (int)(tiledimensions.Y));
-            Hitbox = new Rectangle((int)Position.X, (int)Position.Y, (int)Texture.Width * (int)Scale.X, (int)Texture.Height * (int)Scale.Y); //Updates the position of the hitbox.
         }
 
-        public override void Update()
+        public void Draw(SpriteBatch spriteBatch)
         {
-            Hitbox = new Rectangle((int)Position.X, (int)Position.Y, (int)Texture.Width * (int)Scale.X, (int)Texture.Height * (int)Scale.Y); //Updates the position of the hitbox.
-        }
-
-        public override void Draw(SpriteBatch spriteBatch)
-        {
-            //Console.WriteLine("Tile Draw Function");
             spriteBatch.Draw(Texture, Position, srcRect, Blend, Rotation, Origin, Scale, FX, SortingDepth);
             Color tcolor = Color.Black;
-            //spriteBatch.DrawString(Utilities.fontList["Consolas"], TileID.ToString(), new Vector2(Position.X, Position.Y), tcolor);
         }
 
     }

@@ -9,6 +9,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
 using Cataclysm.Graphics;
 using Cataclysm.Levels;
+using System.Diagnostics;
 
 namespace Cataclysm
 {
@@ -18,7 +19,7 @@ namespace Cataclysm
         public static Game mainInstance;
 
         //Path in %localappdata% in which several information gets saved.
-        public static string savepath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString() + @"\CataclysmEngine";
+        public static string savepath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString() + @"\Xbox_Test";
 
         //Necessary for creating new content managers.
         public static IServiceProvider gameServices;
@@ -28,6 +29,9 @@ namespace Cataclysm
 
         //Main Graphics Manager (from Game1.cs)
         public static GraphicsDeviceManager mainGraphicsManager;
+
+        //Main Sprite Batch (from Game1.cs)
+        public static SpriteBatch mainSpriteBatch;
 
         //Main Camera Instance
         public static Camera mainCamera;
@@ -50,15 +54,17 @@ namespace Cataclysm
             errorlog[1] = e.GetType().Name + ": " + e.Message;
             errorlog[2] = "----------------------------------------------------------------------------------------------------------------";
             errorlog[3] = e.ToString();
-            errorlog[4] = "\nCataclysm Engine 1.1\n\n";
+            errorlog[4] = "\nXbox Test 0.1.0\nCataclysm Engine 1.2\n\n";
 
             if (!Directory.Exists(savepath)) { Directory.CreateDirectory(savepath); } //Check if the %localappdata% directory exists. If it doesn't, create one.
             string logpath = savepath + @"\ERROR_LOG.log"; //The path where the log will be stored.
             File.WriteAllLines(logpath, errorlog); //Write the log array to the a file in the "logpath".
 
-            System.Diagnostics.Process.Start(logpath); //Open the log file.
+            System.Diagnostics.Process.Start("notepad.exe", logpath); //Open the log file.
 
-            mainInstance.Exit(); //Exit the program.
+            Log("An exception has occurred, please check " + logpath + " for more information.");
+
+            //mainInstance.Exit(); //Exit the program.
 
         }
 
@@ -83,6 +89,10 @@ namespace Cataclysm
 
             mainInstance.Exit(); //Exit the program.
 
+        }
+
+        public static void Log(object obj) {
+            Debug.WriteLine(obj);
         }
 
         public static float ObjectWidth(Object2D obj) {

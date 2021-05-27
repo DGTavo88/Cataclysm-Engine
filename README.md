@@ -1,7 +1,8 @@
-# Cataclysm Engine
-Cataclysm Engine is a WIP MonoGame C# Game Engine. 
-The engine is in very early stages of development and is very primitive as of now, aside from being the first engine I make.
+# Cataclysm Engine (Legacy)
+Cataclysm Engine was a MonoGame C# Game Engine. 
+This version of the engine is very primitive, and has been discontinued.
+A better version is being rewriten in C++ using SDL2 and OpenGL with many more features.
 
 # Requirements
-You currently require to have installed:
+You must have installed:
  - Monogame (https://www.monogame.net/downloads/)
